@@ -7,7 +7,7 @@
     justify-content: space-between;
     color: white;
     font-size: calc(10px + 2vmin);
-    padding: 0 2rem;
+    padding: 10px 2rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     z-index: 1;
 }
@@ -30,25 +30,25 @@
     background-color: #282c34;
     color: white;
     font-size: larger;
-    padding: 0 2rem;
+    padding: 10px 2rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     z-index: 1;
 
 }
 
 .home h1{
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
     font-size: xx-large;
 }
 
 .home p{
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
 }
 .home button{
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
     font-size: larger;
     background-color: #61dafb;
     border: none;
@@ -62,3 +62,169 @@
     background-color: #282c34;
     color: white;
 }
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #282c34;
+    color: white;
+    font-size: larger;
+    padding: 0 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+.login h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.login p{
+    margin: 10px;
+    padding: 10px;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    background-color: #282c34;
+    color: white;
+    font-size: larger;
+    padding: 10px 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.terminZakazivanje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #282c34;
+    color: white;
+    font-size: larger;
+    padding: 10px 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.terminZakazivanje h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.terminZakazivanje p{
+    margin: 10px;
+    padding: 10px;
+}
+
+.terminZakazivanje select{
+    margin: 10px;
+    font-size: larger;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.terminZakazivanje select:hover{
+    background-color: #282c34;
+    color: white;
+}
+
+.terminZakazivanje input{
+    margin: 10px;
+    font-size: larger;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.terminZakazivanje input:hover{
+    background-color: #282c34;
+    color: white;
+}
+
+.terminZakazivanje button{
+    margin: 10px;
+    font-size: larger;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.terminZakazivanje button:hover{
+    background-color: #282c34;
+    color: white;
+}
+
+.mojiTermini{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #282c34;
+    color: white;
+    font-size: larger;
+    padding: 10px 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.mojiTermini h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.mojiTermini p{
+    margin: 10px;
+    padding: 10px;
+}
+
+.mup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #282c34;
+    color: white;
+    font-size: larger;
+    padding: 10px 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1;
+} 
+
+.mup h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.mup p{
+    margin: 10px;
+    padding: 10px;
+}
+

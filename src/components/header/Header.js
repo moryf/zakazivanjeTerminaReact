@@ -8,7 +8,7 @@ function Header() {
     <div className='header'>
         <Link to='/'>Home</Link>
         <Link to='/zakazi'>Zakazi</Link>
-        <Link to='/mojiTermini'>MojiTermini</Link>
+        <Link to='/mojiTermini'>Moji Termini</Link>
     </div>
   )
 }

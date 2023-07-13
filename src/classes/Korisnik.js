@@ -1,10 +1,11 @@
-class ClassName{
-    constructor(id,ime,prezime,email,lozinka){
+export class Korisnik{
+    constructor(id,ime,prezime,email,sifra){
         this.id = id;
         this.ime = ime;
         this.prezime = prezime;
         this.email = email;
-        this.lozinka = lozinka;
+        this.sifra = sifra;
+        this.admin=false;
     }
     getId(){
         return this.id;
@@ -18,8 +19,8 @@ class ClassName{
     getEmail(){
         return this.email;
     }
-    getLozinka(){
-        return this.lozinka;
+    getSifra(){
+        return this.sifra;
     }
     setId(id){
         this.id = id;
@@ -33,8 +34,8 @@ class ClassName{
     setEmail(email){
         this.email = email;
     }
-    setLozinka(lozinka){
-        this.lozinka = lozinka;
+    setSifra(sifra){
+        this.sifra = sifra;
     }
     toString(){
         return this.id + " " + this.ime + " " + this.prezime + " " + this.email + " " + this.lozinka;

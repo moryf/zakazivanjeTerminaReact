@@ -35,10 +35,10 @@ function MojiTermini() {
 
  if (korisnik1){
     return (
-        <div>
+        <div className='mojiTermini'> 
             <h1>MojiTermini</h1>
             {korisnik1.termini.map((termin) => (
-                <div key={termin.id}>
+                <div key={termin.id} className='mup'>
                     <p>MUP: {getMupName(termin.mupId)}</p>
                     <p>Vreme: {parseDateandTime(termin.vreme)}</p>
                     <p>Status: {termin.status.status}</p>
