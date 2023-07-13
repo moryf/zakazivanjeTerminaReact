@@ -21,6 +21,10 @@ function Login() {
                 console.log(response.data.id);
                 console.log(JSON.stringify(response.data));
                 localStorage.setItem('korisnik',JSON.stringify(response.data));
+                if(response.data.admin === true){
+                    getMup(response.data.mupId);
+                    window.location.href = '/terminiMup';
+                }
                 window.location.href = '/';
             }
             )
@@ -56,6 +60,14 @@ function Login() {
             );
         }
 
+        function getMup(id){
+            axiosConfig.get(`api/mup/${id}`)
+            .then((response) => {
+                localStorage.setItem('mup',JSON.stringify(response.data));
+                return localStorage.getItem('mup');
+            }
+            )
+        }
 
     
   return (

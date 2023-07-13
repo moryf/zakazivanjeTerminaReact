@@ -22,7 +22,7 @@ if(korisnik){
                 <p>Ukoliko zelite da zakazete termin kliknite na dugme Zakazi termin</p>
                 <p>Ukoliko zelite da pogledate svoje termine kliknite na dugme Moji termini</p>
 
-                <button onClick={()=>{localStorage.removeItem("korisnik");window.location.href = '/login';}}>Izlogujte se</button>
+                <button onClick={()=>{localStorage.clear();window.location.href = '/login';}}>Izlogujte se</button>
             </div>
 
     </div>

@@ -177,18 +177,17 @@
 }
 
 .mojiTermini{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 90vh;
-    background-color: #282c34;
-    color: white;
-    font-size: larger;
-    padding: 10px 2rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  font-size: larger;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
 }
 
 .mojiTermini h1{
@@ -203,28 +202,112 @@
 }
 
 .mup{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 90vh;
-    background-color: #282c34;
-    color: white;
-    font-size: larger;
-    padding: 10px 2rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  height: 35vh;
+  background-color: #282c34;
+  color: white;
+  font-size: larger;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
 } 
 
 .mup h1{
+  margin: 10px;
+  padding: 10px;
+  font-size: xx-large;
+}
+
+.mup p{
+  margin: 10px;
+  padding: 10px;
+}
+
+.terminiMup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  font-size: larger;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.terminiMup h1{
     margin: 10px;
     padding: 10px;
     font-size: xx-large;
 }
 
-.mup p{
+.terminiMup p{
     margin: 10px;
     padding: 10px;
+}
+
+.terminiMup button{
+    margin: 10px;
+    font-size: larger;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.terminiMup button:hover{
+    background-color: #282c34;
+    color: white;
+}
+
+.vesti{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  font-size: larger;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.vest{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  font-size: larger;
+  padding: 10px 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.vest p{
+  margin: 10px;
+  padding: 10px;
+}
+.vest h1{
+  margin: 10px;
+  padding: 10px;
+  font-size: xx-large;
+}
+
+.vest img{
+  margin: 10px;
+  padding: 10px;
+  width: 50%;
+  height: 50%;
 }
 
