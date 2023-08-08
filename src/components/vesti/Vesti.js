@@ -36,17 +36,18 @@ function Vesti() {
             <option value="srbija">Srbija</option>
         </select>
         <button onClick={()=>getVesti(document.getElementById("opcije").value)}>Pretrazi</button>
+        <div className='vesti-prikaz'>
         {vesti.articles.map((vest) => (
             <div key={vest.id} className='vest'>
                 <p>Naslov: {vest.title}</p>
                 <p>Autor: {vest.author}</p>
                 <p>Link:<a href={vest.url}> Link ka vesti</a> </p>
-                <p>Slika:  <img src={vest.urlToImage}/></p>
+                <p><img src={vest.urlToImage}/></p>
                 <p>Vreme: {vest.publishedAt}</p>
                 <p>Izvor: {vest.source.name}</p>
             </div>
         ))}
-
+            </div>
     </div>
   )
 }

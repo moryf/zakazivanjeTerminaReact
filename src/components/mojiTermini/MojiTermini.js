@@ -37,6 +37,7 @@ function MojiTermini() {
     return (
         <div className='mojiTermini'> 
             <h1>MojiTermini</h1>
+            <div className='mupovi'>
             {korisnik1.termini.map((termin) => (
                 <div key={termin.id} className='mup'>
                     <p>MUP: {getMupName(termin.mupId)}</p>
@@ -46,6 +47,7 @@ function MojiTermini() {
                 </div>
                         
                     ))}
+            </div>
         </div>
       )
  } 
