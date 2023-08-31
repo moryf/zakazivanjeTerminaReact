@@ -30,6 +30,7 @@ function Login() {
             )
             .catch((error) => {
                 console.log(error);
+                window.alert('Pogresan email ili sifra');
             }
             );
 
@@ -56,6 +57,7 @@ function Login() {
             )
             .catch((error) => {
                 console.log(error);
+                window.alert(error.response);
             }
             );
         }

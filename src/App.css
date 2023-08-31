@@ -390,10 +390,11 @@
 }
 
 .vest img{
-  margin: 10px;
-  padding: 10px;
-  width: 50%;
-  height: 50%;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    
 }
 
 .vesti h1{

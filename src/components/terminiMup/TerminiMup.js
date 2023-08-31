@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState,useEffect} from 'react';
 import axiosConfig from '../../axiosConfig';
+import StatistikaTerminiMupChart from '../charts/StatistikaTerminiMupChart';
 
 function TerminiMup() {
     const [korisnik,setKorisnik] = useState(null);
@@ -57,6 +58,9 @@ function TerminiMup() {
         return `${date2} ${time}`;
     }
 
+        
+
+
   return (
     <div className='terminiMup'>
         <h1>Termini</h1>
@@ -69,6 +73,13 @@ function TerminiMup() {
                 <button onClick={()=>odbijTermin(termin.id)}  >Odbij</button>
             </div>
         ))}
+        <h1>Statistika Termina</h1>
+        <p>Broj termina: {JSON.parse(localStorage.getItem('mup')).termini.length}</p>
+        <p>Broj zahteva: {JSON.parse(localStorage.getItem('mup')).termini.filter(termin => termin.status.status === 'Zahtev').length}</p>
+        <p>Broj zakazanih termina: {JSON.parse(localStorage.getItem('mup')).termini.filter(termin => termin.status.status === 'Zakazan').length}</p>
+        <p>Broj odbijenih termina: {JSON.parse(localStorage.getItem('mup')).termini.filter(termin => termin.status.status === 'Odbijen').length}</p>
+
+        <StatistikaTerminiMupChart/>
     </div>
   )
 }
