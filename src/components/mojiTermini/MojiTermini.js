@@ -30,13 +30,13 @@ function MojiTermini() {
     }
 
     function parseDateandTime(date){
-        const date1 = new Date(date);
-        const date2 = date1.toLocaleDateString();
-        const time = date1.toLocaleTimeString();    
-        console.log(date2);
-        console.log(time);
-        return `${date2} ${time}`;
+        var datum = new Date(date);
+        var date = datum.toDateString();
+        var time = datum.toLocaleTimeString();
+        time = time.slice(0,-6)+time.slice(-3);
+        return `${date} ${time}`;
     }
+
     function getTermini(vrednost){
             if(vrednost === 'zakazani'){
                 setTermini(korisnik1.termini.filter(termin => termin.status.status === 'Zakazan'));
@@ -50,7 +50,36 @@ function MojiTermini() {
             console.log(termini);
     }  
 
+    function refreshKorisnikTermini(){
+        axiosConfig.get(`api/korisnik/${korisnik1.id}/termini`)
+        .then((response) => {
+            console.log(response.data);
+            setTermini(response.data);
+            korisnik1.termini = response.data;
+            localStorage.setItem('korisnik',JSON.stringify(korisnik1));
+        })
+    }
 
+    function obrisiTermin(id){
+        axiosConfig.delete(`api/termin/${id}`)
+        .then((response) => {
+            console.log(response.data);
+            refreshKorisnikTermini();
+        })
+    }
+
+    function ispisiPravilnoTipDokumenta(tipDokumenta){
+        console.log(tipDokumenta);
+        if(tipDokumenta === "LicnaKarta"){
+            return 'Licna karta';
+        }
+        else if(tipDokumenta === "Pasos"){
+            return 'Pasos';
+        }
+        else{
+            return 'Vozacka dozvola';
+        }
+    }
 
 
  if (korisnik1){
@@ -66,14 +95,15 @@ function MojiTermini() {
                 <button onClick={()=>getTermini(document.getElementById("filter").value)}>Pretrazi</button>
             {termini.map((termin) => (
                 <div key={termin.id} className='mup'>
-                    <p>MUP: {getMupName(termin.mupId)}</p>
                     <p>Vreme: {parseDateandTime(termin.vreme)}</p>
                     <p>Status: {termin.status.status}</p>
-                    <p>TipDokumenta: {termin.tipDokumenta.tipDokumenta}</p>
+                    <p>TipDokumenta: {ispisiPravilnoTipDokumenta(termin.tipDokumenta.tipDokumenta) }</p>
+                    <button onClick={()=>obrisiTermin(termin.id)}>Obrisi</button>
                 </div>
                         
                     ))}
             </div>
+            <button onClick={()=>refreshKorisnikTermini()}>Osvezi</button>
         </div>
       )
  } 
